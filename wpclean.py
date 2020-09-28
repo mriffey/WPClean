@@ -13,6 +13,12 @@ txttoclean = txttoclean.replace('<!-- /wp:list -->','')
 txttoclean = txttoclean.replace('<!-- wp:quote -->','')
 txttoclean = txttoclean.replace('<!-- /wp:quote -->','')
 
+txttoclean = txttoclean.replace('<blockquote class="wp-block-quote">', '')
+txttoclean = txttoclean.replace('</blockquote>', '')
+
+txttoclean = txttoclean.replace('<cite>', ' - ')
+txttoclean = txttoclean.replace('</cite>', '')
+
 txttoclean = txttoclean + '<i>Mark Riffey is an investor and advisor to small business owners. Want to learn' + \
              ' more about Mark or ask him to write about a strategic, operations or marketing problem? See ' + \
              '<a class="text" href="http://www.markriffey.com/" target="_blank" rel="noopener noreferrer">' + \
